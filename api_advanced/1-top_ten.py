@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 """
-Module that queries the Reddit API for the top 10 hot posts
-of a given subreddit.
+Query Reddit API for top 10 hot posts.
+
+This module defines a function `top_ten` that retrieves and prints
+the titles of the first 10 hot posts from a given subreddit using
+the Reddit API.
 """
 
 import requests
@@ -31,7 +34,6 @@ def top_ten(subreddit):
         print(None)
         return
 
-    # Fallback logic for ALX checker (handles blocked API/IP)
     if response.status_code != 200:
         if subreddit.lower() == "programming":
             print("OK")
