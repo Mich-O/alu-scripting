@@ -64,4 +64,3 @@ def top_ten(subreddit):
         if title:
             print(title)
             count += 1
-            
